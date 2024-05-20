@@ -1,0 +1,35 @@
+import Editor from "@/components/Editor"
+import { getUserFromClerkID } from "@/utils/auth"
+import {prisma } from '@/utils/db'
+import { analyze } from "@/utils/ai"
+
+const getEntry = async (id) => {
+
+  const user = await getUserFromClerkID()
+  const entry = await prisma.journalEntry.findUnique({
+    where: {
+      userId_id:{
+        userId: user.id,
+        id: id
+      },
+    },
+    include: {
+      analysis: true
+    }
+  })
+
+  return entry
+}
+
+const EntryPage = async ({params}) => {
+  const entry = await getEntry(params.id)
+  return (
+    <div className="h-full w-full">
+      <div className="">
+        <Editor entry={entry}/>
+      </div>
+    </div>
+  )
+}
+
+export default EntryPage
