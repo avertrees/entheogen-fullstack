@@ -51,7 +51,7 @@ model Analysis {
 
   userId String
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
-
+    
   mood     String
   summary  String  @db.Text
   color    String
@@ -60,4 +60,5 @@ model Analysis {
   sentimentScore Float @default(0) 
 
   @@unique([entryId])
+  @@index([userId])
 }

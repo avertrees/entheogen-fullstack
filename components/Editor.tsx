@@ -3,7 +3,7 @@ import { useState } from "react"
 import { useAutosave } from "react-autosave"
 import { updateEntry } from "@/utils/api"
 import Spinner from './Spinner'
-
+import FeelingsWheel from "@/components/FeelingsWheel"
 
 const Editor = ({entry}) => {
   const [value, setValue] = useState(entry.content)
@@ -41,6 +41,7 @@ const Editor = ({entry}) => {
       </div>
       <div className="col-span-2">
       <textarea className="w-full h-full p-8 text-xl outline-none" value={value} onChange={(e)=>setValue(e.target.value)} />
+      <FeelingsWheel />
       </div>
       <div className="border-l border-black/5">
         <div className="px-6 py-10" style={{backgroundColor: color}}>
