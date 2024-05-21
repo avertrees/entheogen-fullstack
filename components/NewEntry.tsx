@@ -14,7 +14,7 @@ const NewEntry = () => {
 
   return (
     <div
-      className="cursor-pointer overflow-hidden rounded-lg bg-white shadow"
+      className="cursor-pointer overflow-hidden place-content-center max-h-24 rounded-lg bg-white shadow"
       onClick={handleOnClick}
     >
       <div className="px-4 py-5 sm:p-6">
