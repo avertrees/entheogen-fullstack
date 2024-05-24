@@ -55,7 +55,7 @@ const Editor = ({entry}) => {
               </li>
               ))}
             </ul>
-            <FeelingsWheel />
+            {/* <FeelingsWheel /> */}
         </div>
       </div>
       </div>
