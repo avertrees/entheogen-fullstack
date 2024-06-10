@@ -5,7 +5,7 @@ import P5 from "./P5Wrapper"
 export const Visualizer = () => {
   return (
     <div>
-      Viz
+      {/* Viz */}
       <P5/>
       {/* <Button.Group widths='6' floated="right" compact >
         <Button id="gamma" onClick={this.handleGamma} color='red'>Gamma</Button>

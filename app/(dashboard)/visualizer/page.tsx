@@ -23,7 +23,7 @@ const VisualizerPage = async () => {
       <h2 className="text-4xl mb-12">Journal</h2>
       <div className="my-8">
         Visualization
-        <Uploader />
+        {/* <Uploader /> */}
       </div>
       <div className="grid grid-cols-3 gap-4">
         <Visualizer />

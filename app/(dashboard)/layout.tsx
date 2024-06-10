@@ -8,6 +8,7 @@ const DashboardLayout = ({children}) => {
     {label: 'journal', href: '/journal'}, 
     {label: 'history', href: '/history'}, 
     {label: 'visualizer', href: '/visualizer'}, 
+    {label: 'feelings', href: '/feelings'}, 
   ]
   return (
     <div className="h-screen w-screen relative">
