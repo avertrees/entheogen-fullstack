@@ -1,0 +1,32 @@
+const emotions = {
+  primary_emotions: [
+    { name: 'Joy', color: '#FFFF00' },
+    { name: 'Trust', color: '#00FF00' },
+    { name: 'Fear', color: '#008000' },
+    { name: 'Surprise', color: '#00FFFF' },
+    { name: 'Sadness', color: '#0000FF' },
+    { name: 'Disgust', color: '#800080' },
+    { name: 'Anger', color: '#FF0000' },
+    { name: 'Anticipation', color: '#FFA500' },
+  ],
+  secondary_emotions: [
+    { name: 'Love', color: '#ADFF2F' },
+    { name: 'Submission', color: '#5F9EA0' },
+    { name: 'Awe', color: '#4682B4' },
+    { name: 'Disapproval', color: '#9370DB' },
+    { name: 'Remorse', color: '#8B4513' },
+    { name: 'Contempt', color: '#A52A2A' },
+    { name: 'Aggressiveness', color: '#FF4500' },
+    { name: 'Optimism', color: '#FFD700' },
+  ],
+  tertiary_emotions: [
+    { name: 'Serenity', color: '#FFFFE0' },
+    { name: 'Acceptance', color: '#98FB98' },
+    { name: 'Apprehension', color: '#90EE90' },
+    { name: 'Distraction', color: '#E0FFFF' },
+    { name: 'Pensiveness', color: '#E6E6FA' },
+    { name: 'Boredom', color: '#D3D3D3' },
+    { name: 'Annoyance', color: '#FFB6C1' },
+    { name: 'Interest', color: '#FFE4B5' },
+  ],
+}
