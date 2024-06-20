@@ -26,14 +26,16 @@
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
-
+import { sad } from '@/data/journal-prompts/sad'
 const EditorComp = dynamic(() => import('@/components/MDXEditor'), {
   ssr: false,
 })
 
-const markdown = `
-Hello **world**!
-`
+// const markdown = `
+// Hello **world**!
+// `
+
+const markdown = sad
 
 export default function Home() {
   return (
