@@ -1,6 +1,5 @@
-
-import  Uploader  from "@/components/FileUploader"
-import {Visualizer} from "@/components/Visualizer"
+import Uploader from '@/components/FileUploader'
+import { Visualizer } from '@/components/Visualizer'
 const getEEGData = async () => {
   // const user = await getUserFromClerkID
   // const entry = await prisma.journalEntry.findMany({
@@ -11,7 +10,7 @@ const getEEGData = async () => {
   //     createdAt: 'desc'
   //   }
   //  })
-  //  eegData = 
+  //  eegData =
   //  return eegData
 }
 
@@ -23,7 +22,7 @@ const VisualizerPage = async () => {
       <h2 className="text-4xl mb-12">Journal</h2>
       <div className="my-8">
         Visualization
-        {/* <Uploader /> */}
+        <Uploader />
       </div>
       <div className="grid grid-cols-3 gap-4">
         <Visualizer />
