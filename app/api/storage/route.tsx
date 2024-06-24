@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { initializeApp } from 'firebase/app'
 import { getDownloadURL, getStorage, ref } from 'firebase/storage'
-import { firebaseConfig } from '@/firebase'
+import { firebaseConfig } from '@/firebase.config'
 // https://dev.to/reeshee/how-to-use-firebase-storage-to-upload-and-retrieve-files-in-nextjs-pages-router-2p16
 async function filePOST(request: NextApiRequest, res: NextApiResponse) {
   // Initialize the Firebase app with the provided configuration
@@ -10,8 +10,6 @@ async function filePOST(request: NextApiRequest, res: NextApiResponse) {
   const storage = getStorage(app)
   // More code to handle uploads incoming...
 }
-
-
 
 async function fileGET(request: NextApiRequest, res: NextApiResponse) {
   // Extract the 'file' parameter from the request URL.
@@ -40,18 +38,23 @@ async function fileGET(request: NextApiRequest, res: NextApiResponse) {
   return res.status(400).json({ error: 'Invalid Request' })
 }
 
-export const GET = async (request: NextApiRequest, response: NextApiResponse) => {
+export const GET = async (
+  request: NextApiRequest,
+  response: NextApiResponse
+) => {
   return await fileGET(request, response)
-} 
-
-export const POST = async (request: NextApiRequest, response: NextApiResponse) => {
-  await filePOST(request, response)
-} 
-
-// Disable parsing the body by Next.js default behavior
-export const config = {
-  api: {
-    bodyParser: false,
-  },
 }
 
+export const POST = async (
+  request: NextApiRequest,
+  response: NextApiResponse
+) => {
+  await filePOST(request, response)
+}
+
+// // Disable parsing the body by Next.js default behavior
+// export const config = {
+//   api: {
+//     bodyParser: false,
+//   },
+// }
