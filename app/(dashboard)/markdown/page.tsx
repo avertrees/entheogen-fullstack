@@ -23,21 +23,59 @@
 //   return <MDXEditor markdown="# Hello world" plugins={[headingsPlugin(), listsPlugin(), quotePlugin(), thematicBreakPlugin()]} />
 // }
 
+'use client'
+
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
+
+//feelings
+import { isEmotion } from '@/utils/feelings'
+import { useSearchParams } from 'next/navigation'
+
+//import journal prompts
+import { acceptance } from '@/data/journal-prompts/acceptance'
+import { anger } from '@/data/journal-prompts/anger'
+import { apathy } from '@/data/journal-prompts/apathy'
+import { courage } from '@/data/journal-prompts/courage'
+import { fear } from '@/data/journal-prompts/fear'
+import { grief } from '@/data/journal-prompts/grief'
+import { guilt } from '@/data/journal-prompts/guilt'
+import { impureDesire } from '@/data/journal-prompts/impure_desire'
+import { numbness } from '@/data/journal-prompts/numbness'
+import { pride } from '@/data/journal-prompts/pride'
 import { sad } from '@/data/journal-prompts/sad'
+import { shame } from '@/data/journal-prompts/shame'
+import { unworthiness } from '@/data/journal-prompts/unworthiness'
+
 const EditorComp = dynamic(() => import('@/components/MDXEditor'), {
   ssr: false,
 })
 
-// const markdown = `
-// Hello **world**!
-// `
-
-const markdown = sad
+const emotionsHash = {
+  acceptance: acceptance,
+  anger: anger,
+  apathy: apathy,
+  courage: courage,
+  fear: fear,
+  grief: grief,
+  guilt: guilt,
+  impureDesire: impureDesire,
+  numbness: numbness,
+  pride: pride,
+  sad: sad,
+  shame: shame,
+  unworthiness: unworthiness,
+}
 
 export default function Home() {
+  const searchParams = useSearchParams()
+  const emotion = searchParams.get('emotion')
+  console.log('emotion: ', emotion)
+  const isThisAnEmotion = isEmotion(emotion)
+  console.log('isThisAnEmotion?: ', isThisAnEmotion)
+  const markdown = isThisAnEmotion ? emotionsHash[emotion] : sad
+
   return (
     <>
       <p>

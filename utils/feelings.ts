@@ -1,5 +1,6 @@
 import { data } from '@/data/feelings/data'
-let emotions = []
+
+let emotions = ['acceptance', 'anger', 'apathy', 'courage', 'fear', 'grief', 'guilt', 'impure_desire', 'numbness', 'pride', 'sad', 'shame', 'unworthiness']
 
 export const getEmotions = () => {
   // let emotions = []
@@ -22,6 +23,7 @@ export const getEmotions = () => {
     })
   })
 }
+
 export const isEmotion = (name) => {
   // return name in data
   if (emotions.length > 0) {
