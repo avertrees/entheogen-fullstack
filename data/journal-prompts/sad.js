@@ -139,5 +139,4 @@ hear it with the intention of creating closure. Let any and all emotions flow.
 Rub your hands together with the intention of creating the energy of love, happiness, healing or gratitude. When your hands begin to get tired, place one hand on your heart and one on your womb, and imagine that the positive energy is running through you and filling you up.
 
 This step is optional. Go find a mirror and tell yourself everything you need to hear to feel better.
-
 `

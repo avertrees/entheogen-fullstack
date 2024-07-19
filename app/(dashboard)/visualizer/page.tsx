@@ -1,5 +1,6 @@
 import Uploader from '@/components/FileUploader'
 import { Visualizer } from '@/components/Visualizer'
+
 const getEEGData = async () => {
   // const user = await getUserFromClerkID
   // const entry = await prisma.journalEntry.findMany({

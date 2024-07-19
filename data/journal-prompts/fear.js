@@ -136,5 +136,4 @@ yourself feel better?**
 3. Close your eyes and sit in complete stillness for a minute or two while
    listening to the playlist below. When thoughts come, practice letting them
    go, like clouds floating by.
-
 `
