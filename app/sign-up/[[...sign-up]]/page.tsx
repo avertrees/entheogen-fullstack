@@ -1,6 +1,7 @@
-import { SignUp } from "@clerk/nextjs";
+import { SignUp } from '@clerk/nextjs'
 export default function SignUpPage() {
-    return (
+  return (
+    <div className="h-screen w-screen relative">
       <SignUp
         path="/sign-up"
         routing="path"
@@ -8,6 +9,6 @@ export default function SignUpPage() {
         redirectUrl="/new-user"
         afterSignUpUrl="/new-user"
       />
-    )
-  
+    </div>
+  )
 }

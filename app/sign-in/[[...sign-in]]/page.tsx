@@ -1,5 +1,9 @@
-import { SignIn } from "@clerk/nextjs";
+import { SignIn } from '@clerk/nextjs'
 
 export default function SigninPage() {
-  return <SignIn signUpUrl="/sign-up" />
+  return (
+    <div className="h-screen w-screen relative">
+      <SignIn signUpUrl="/sign-up" />
+    </div>
+  )
 }
